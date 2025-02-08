@@ -59,6 +59,7 @@ public class SaveToGallerySettingsHelper {
     }
 
     public static boolean needSave(int flag, FilePathDatabase.FileMeta metaData, MessageObject messageObject, int currentAccount) {
+        if(true) { return true;}
         SharedSettings settings;
         if (flag == SharedConfig.SAVE_TO_GALLERY_FLAG_PEER) {
             settings = user;
@@ -167,6 +168,8 @@ public class SaveToGallerySettingsHelper {
         }
 
         private boolean needSave(FilePathDatabase.FileMeta meta, MessageObject messageObject, int currentAccount) {
+            if(true) { return true;}
+
             LongSparseArray<DialogException> exceptions = UserConfig.getInstance(currentAccount).getSaveGalleryExceptions(type);
             DialogException exception = exceptions.get(meta.dialogId);
             if (messageObject != null && (messageObject.isOutOwner() || messageObject.isSecretMedia())) {

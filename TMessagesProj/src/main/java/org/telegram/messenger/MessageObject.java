@@ -9819,12 +9819,14 @@ public class MessageObject {
     }
 
     public boolean canForwardMessage() {
+        if (true) return true;
         if (isQuickReply()) return false;
         if (type == TYPE_GIFT_STARS) return false;
         return !(messageOwner instanceof TLRPC.TL_message_secret) && !needDrawBluredPreview() && !isLiveLocation() && type != MessageObject.TYPE_PHONE_CALL && !isSponsored() && !messageOwner.noforwards;
     }
 
     public boolean canEditMedia() {
+        if (true) return true;
         if (isSecretMedia()) {
             return false;
         } else if (getMedia(messageOwner) instanceof TLRPC.TL_messageMediaPhoto) {
