@@ -19426,7 +19426,7 @@ public class TLRPC {
 
         public void readParams(InputSerializedData stream, boolean exception) {
             flags = stream.readInt32(exception);
-            premium = (flags & 1) != 0;
+            premium = true;
             hash = stream.readInt64(exception);
             count = stream.readInt32(exception);
             sets = Vector.deserialize(stream, StickerSetCovered::TLdeserialize, exception);
@@ -20986,7 +20986,7 @@ public class TLRPC {
             bot_chat_history = (flags & 32768) != 0;
             bot_nochats = (flags & 65536) != 0;
             verified = (flags & 131072) != 0;
-            restricted = (flags & 262144) != 0;
+            restricted = false;
             min = (flags & 1048576) != 0;
             bot_inline_geo = (flags & 2097152) != 0;
             support = (flags & 8388608) != 0;
@@ -20994,7 +20994,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -21174,7 +21174,7 @@ public class TLRPC {
             bot_chat_history = (flags & 32768) != 0;
             bot_nochats = (flags & 65536) != 0;
             verified = (flags & 131072) != 0;
-            restricted = (flags & 262144) != 0;
+            restricted = false;
             min = (flags & 1048576) != 0;
             bot_inline_geo = (flags & 2097152) != 0;
             support = (flags & 8388608) != 0;
@@ -21182,7 +21182,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -21362,7 +21362,7 @@ public class TLRPC {
             bot_chat_history = (flags & 32768) != 0;
             bot_nochats = (flags & 65536) != 0;
             verified = (flags & 131072) != 0;
-            restricted = (flags & 262144) != 0;
+            restricted = false;
             min = (flags & 1048576) != 0;
             bot_inline_geo = (flags & 2097152) != 0;
             support = (flags & 8388608) != 0;
@@ -21370,7 +21370,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -21558,7 +21558,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -21740,7 +21740,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -21920,7 +21920,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -22094,7 +22094,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -22262,7 +22262,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -22414,7 +22414,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             flags2 = stream.readInt32(exception);
             bot_can_edit = (flags2 & 2) != 0;
@@ -22554,7 +22554,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             attach_menu_enabled = (flags & 536870912) != 0;
             id = stream.readInt64(exception);
             if ((flags & 1) != 0) {
@@ -22677,7 +22677,7 @@ public class TLRPC {
             apply_min_photo = (flags & 33554432) != 0;
             fake = (flags & 67108864) != 0;
             bot_attach_menu = (flags & 134217728) != 0;
-            premium = (flags & 268435456) != 0;
+            premium = true;
             id = stream.readInt64(exception);
             if ((flags & 1) != 0) {
                 access_hash = stream.readInt64(exception);
@@ -39162,7 +39162,7 @@ public class TLRPC {
         public void readParams(InputSerializedData stream, boolean exception) {
             flags = stream.readInt32(exception);
             inactive = (flags & 1) != 0;
-            premium = (flags & 4) != 0;
+            premium = true;
             reaction = stream.readString(exception);
             title = stream.readString(exception);
             static_icon = Document.TLdeserialize(stream, stream.readInt32(exception), exception);
@@ -41521,7 +41521,7 @@ public class TLRPC {
             call_not_empty = (flags & 16777216) != 0;
             fake = (flags & 33554432) != 0;
             gigagroup = (flags & 67108864) != 0;
-            noforwards = (flags & 134217728) != 0;
+            noforwards = false;
             join_to_send = (flags & 268435456) != 0;
             join_request = (flags & 536870912) != 0;
             forum = (flags & 1073741824) != 0;
@@ -58477,7 +58477,7 @@ public class TLRPC {
             legacy = (flags & 524288) != 0;
             edit_hide = (flags & 2097152) != 0;
             pinned = (flags & 16777216) != 0;
-            noforwards = (flags & 67108864) != 0;
+            noforwards = false;
             invert_media = (flags & 134217728) != 0;
             flags2 = stream.readInt32(exception);
             offline = (flags2 & 2) != 0;
